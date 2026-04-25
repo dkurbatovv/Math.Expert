@@ -1,15 +1,546 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Подготовка к ОГЭ и ЕГЭ по математике. Повышу успеваемость и помогу сдать экзамен на высокий балл. Репетитор по математике с опытом более 5 лет." />
-    <meta name="keywords" content="репетитор математика ОГЭ ЕГЭ, подготовка к экзаменам по математике, математика подготовка к егэ профиль, репетитор по математике онлайн" />
+    <meta name="description" content="Подготовка к ОГЭ и ЕГЭ по математике. Повышу успеваемость и помогу сдать экзамен на высокий балл." />
+    <meta name="keywords" content="репетитор математика ОГЭ ЕГЭ, подготовка к экзаменам по математике" />
     <title>MathExpert — Репетитор по математике: Подготовка к ОГЭ и ЕГЭ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden selection:bg-brand-100 selection:text-brand-900">
+    
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-2">
+            <div class="bg-brand-600 p-2 rounded-lg text-white">
+              <i data-lucide="rocket" class="w-6 h-6"></i>
+            </div>
+            <span class="font-display font-bold text-xl text-brand-900 tracking-tight">MathExpert</span>
+          </div>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#about" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Обо мне</a>
+            <a href="#services" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Услуги</a>
+            <a href="#results" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Результаты</a>
+            <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Цены</a>
+            <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">FAQ</a>
+            <a href="#contact" class="bg-brand-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-700 transition-all hover:shadow-lg hover:shadow-brand-200 active:scale-95">Записаться</a>
+          </div>
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600">
+            <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-100 overflow-hidden transition-all">
+        <div class="px-4 pt-2 pb-6 space-y-1">
+          <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors">Обо мне</a>
+          <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors">Услуги</a>
+          <a href="#results" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors">Результаты</a>
+          <a href="#pricing" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors">Цены</a>
+          <a href="#faq" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors">FAQ</a>
+          <div class="pt-4 px-3">
+            <a href="#contact" class="block w-full text-center bg-brand-600 text-white px-5 py-3 rounded-xl text-base font-semibold">Записаться на занятие</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 bg-[radial-gradient(circle_at_50%_-20%,#dbeafe_0%,transparent_70%)] opacity-50"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+      <div class="absolute top-1/2 -left-24 w-72 h-72 bg-brand-200 rounded-full blur-3xl opacity-20 -z-10"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-scroll">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider mb-6">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Средний балл учеников — 87+</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 leading-[1.1] mb-6 text-balance">
+              Подготовка к ОГЭ и ЕГЭ по математике с <span class="text-brand-600 relative inline-block">гарантией
+                <svg class="absolute -bottom-2 left-0 w-full h-2 text-brand-400" viewBox="0 0 200 8" fill="none"><path d="M2 6C30.6667 3.33333 89.3333 1.1 198 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" /></svg>
+              </span> результата
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 max-w-xl leading-relaxed">
+              Повышу успеваемость, помогу поверить в свои силы и сдать сложнейшие экзамены на высокий балл благодаря проверенной методике.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#contact" class="group inline-flex items-center justify-center gap-2 bg-brand-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-brand-200">
+                Записаться на занятие
+                <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <div class="flex items-center gap-4 text-sm text-slate-500 font-medium px-4">
+                <div class="flex -space-x-2">
+                  <img src="https://picsum.photos/seed/user1/100/100" alt="Student" class="w-8 h-8 rounded-full border-2 border-white ring-2 ring-brand-50" />
+                  <img src="https://picsum.photos/seed/user2/100/100" alt="Student" class="w-8 h-8 rounded-full border-2 border-white ring-2 ring-brand-50" />
+                  <img src="https://picsum.photos/seed/user3/100/100" alt="Student" class="w-8 h-8 rounded-full border-2 border-white ring-2 ring-brand-50" />
+                </div>
+                <span>150+ успешных кейсов</span>
+              </div>
+            </div>
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                <i data-lucide="check-circle-2" class="text-brand-500 shrink-0 w-4.5 h-4.5"></i>
+                <span>Индивидуальный план</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                <i data-lucide="check-circle-2" class="text-brand-500 shrink-0 w-4.5 h-4.5"></i>
+                <span>Доступ 24/7</span>
+              </div>
+              <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+                <i data-lucide="check-circle-2" class="text-brand-500 shrink-0 w-4.5 h-4.5"></i>
+                <span>Пробники ежемесячно</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative animate-scroll animate-delay-200">
+            <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl shadow-brand-100 border-4 border-white">
+              <img src="https://picsum.photos/seed/math-tutor/800/1000" alt="Репетитор по математике" class="w-full aspect-[4/5] object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent hidden lg:block"></div>
+              <div class="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hidden lg:block">
+                <p class="text-white text-lg font-medium leading-snug">"Моя цель — не просто научить решать задачи, а привить любовь к логике и математическому мышлению."</p>
+                <div class="mt-4 flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold">А.К.</div>
+                  <div>
+                    <p class="text-white font-bold text-sm">Алексей Кузнецов</p>
+                    <p class="text-white/70 text-xs">Ведущий преподаватель</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-600 rounded-3xl -z-10 rotate-12"></div>
+            <div class="absolute -top-6 -left-6 w-24 h-24 border-4 border-brand-200 rounded-full -z-10"></div>
+            <div class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 p-4 bg-white rounded-2xl shadow-xl border border-brand-50 hidden md:block">
+              <div class="flex items-center gap-3">
+                <div class="p-3 bg-green-100 text-green-600 rounded-xl">
+                  <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 font-bold uppercase">Результат</p>
+                  <p class="text-xl font-display font-bold text-slate-900">+35 баллов</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="lg:w-1/2 animate-scroll">
+            <h2 class="text-base font-bold text-brand-600 uppercase tracking-widest mb-4">О преподавателе</h2>
+            <h3 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mb-8 leading-tight">Индивидуальный подход и вера в возможности каждого ученика</h3>
+            <div class="space-y-6 text-lg text-slate-600">
+              <p>Меня зовут Алексей, и я помогаю школьникам преодолеть страх перед математикой уже более 5 лет. За это время я разработал собственную методику, которая позволяет систематизировать знания даже при подготовке «с нуля».</p>
+              <p>Мое образование — МГУ имени М.В. Ломоносова (механико-математический факультет). Я сам прошел через все этапы подготовки и знаю все «подводные камни» экзаменов изнутри.</p>
+              <div class="pt-4 grid grid-cols-2 gap-4">
+                <div class="p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                  <p class="text-2xl font-bold text-brand-700 mb-1">МГУ</p>
+                  <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Образование</p>
+                </div>
+                <div class="p-4 bg-brand-50 rounded-2xl border border-brand-100">
+                  <p class="text-2xl font-bold text-brand-700 mb-1">Top-5</p>
+                  <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Рейтинг Profi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 w-full animate-scroll" style="transition-delay: 200ms;">
+            <div class="grid grid-cols-2 gap-4 sm:gap-6">
+              <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-xl hover:shadow-brand-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brand-600 mb-4 group-hover:scale-110 transition-transform"><i data-lucide="clock" class="w-7 h-7"></i></div>
+                <div class="text-3xl font-display font-bold text-slate-900">5+</div>
+                <div class="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">Лет опыта</div>
+              </div>
+              <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-xl hover:shadow-brand-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brand-600 mb-4 group-hover:scale-110 transition-transform"><i data-lucide="graduation-cap" class="w-7 h-7"></i></div>
+                <div class="text-3xl font-display font-bold text-slate-900">300+</div>
+                <div class="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">Учеников</div>
+              </div>
+              <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-xl hover:shadow-brand-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brand-600 mb-4 group-hover:scale-110 transition-transform"><i data-lucide="award" class="w-7 h-7"></i></div>
+                <div class="text-3xl font-display font-bold text-slate-900">87</div>
+                <div class="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">Средний балл</div>
+              </div>
+              <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col items-center text-center group hover:bg-white hover:shadow-xl hover:shadow-brand-100 transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-brand-600 mb-4 group-hover:scale-110 transition-transform"><i data-lucide="book-open" class="w-7 h-7"></i></div>
+                <div class="text-3xl font-display font-bold text-slate-900">12</div>
+                <div class="text-sm font-medium text-slate-500 uppercase tracking-wide mt-1">Курсов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 animate-scroll">
+        <h2 class="text-base font-bold text-brand-600 uppercase tracking-widest mb-4">Услуги и форматы</h2>
+        <h3 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 leading-tight">Найдем подходящий формат <br class="hidden sm:block" /> для ваших целей</h3>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full animate-scroll">
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6"><i data-lucide="target" class="w-7 h-7"></i></div>
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Подготовка к ЕГЭ</h4>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Профильный и базовый уровни. Разбор всех частей, фокус на 2-ю часть и сложные задачи.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">База</span>
+              <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">Профиль</span>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto">
+              <p class="text-xs font-bold text-slate-400 uppercase mb-1">Стоимость</p>
+              <p class="text-xl font-display font-bold text-brand-600">от 2500₽/час</p>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full animate-scroll" style="transition-delay: 100ms;">
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6"><i data-lucide="zap" class="w-7 h-7"></i></div>
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Подготовка к ОГЭ</h4>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Устранение пробелов, подготовка к типовым заданиям и психологическая настройка.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">9 класс</span>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto">
+              <p class="text-xs font-bold text-slate-400 uppercase mb-1">Стоимость</p>
+              <p class="text-xl font-display font-bold text-brand-600">от 2000₽/час</p>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full animate-scroll" style="transition-delay: 200ms;">
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6"><i data-lucide="trending-up" class="w-7 h-7"></i></div>
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Успеваемость</h4>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Помощь с текущей программой, подготовка к контрольным работам и ВПР.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">5-11 классы</span>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto">
+              <p class="text-xs font-bold text-slate-400 uppercase mb-1">Стоимость</p>
+              <p class="text-xl font-display font-bold text-brand-600">от 1800₽/час</p>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-sm hover:shadow-xl hover:shadow-brand-100 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full animate-scroll" style="transition-delay: 300ms;">
+            <div class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6"><i data-lucide="users" class="w-7 h-7"></i></div>
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Групповые занятия</h4>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Мини-группы до 4 человек. Атмосфера поддержки и здоровая конкуренция.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[10px] font-bold uppercase tracking-wider">Онлайн</span>
+            </div>
+            <div class="pt-6 border-t border-slate-100 mt-auto">
+              <p class="text-xs font-bold text-slate-400 uppercase mb-1">Стоимость</p>
+              <p class="text-xl font-display font-bold text-brand-600">от 1200₽/час</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-24 bg-brand-900 text-white overflow-hidden relative">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-brand-800 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-600 rounded-full blur-3xl opacity-20 -translate-x-1/2 translate-y-1/2"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-20 animate-scroll">
+          <h2 class="text-brand-400 font-bold uppercase tracking-widest mb-4">Почему выбирают меня</h2>
+          <h3 class="text-3xl sm:text-5xl font-display font-bold leading-tight">Больше, чем просто сухие формулы</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div class="flex gap-6 animate-scroll">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-400"><i data-lucide="book-marked" class="w-6.5 h-6.5"></i></div>
+            <div>
+              <h4 class="text-xl font-display font-bold mb-3">Индивидуальный план</h4>
+              <p class="text-brand-100/70 leading-relaxed">Программа подбирается после бесплатного диагностического урока.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 animate-scroll" style="transition-delay: 50ms;">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-400"><i data-lucide="brain-circuit" class="w-6.5 h-6.5"></i></div>
+            <div>
+              <h4 class="text-xl font-display font-bold mb-3">Понятный язык</h4>
+              <p class="text-brand-100/70 leading-relaxed">Объясняю даже самые абстрактные темы на жизненных примерах.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 animate-scroll" style="transition-delay: 100ms;">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-400"><i data-lucide="shield-check" class="w-6.5 h-6.5"></i></div>
+            <div>
+              <h4 class="text-xl font-display font-bold mb-3">Авторская методика</h4>
+              <p class="text-brand-100/70 leading-relaxed">Комбинация лучших техник подготовки и личных разработок.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 animate-scroll" style="transition-delay: 150ms;">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-400"><i data-lucide="eye" class="w-6.5 h-6.5"></i></div>
+            <div>
+              <h4 class="text-xl font-display font-bold mb-3">Регулярные пробники</h4>
+              <p class="text-brand-100/70 leading-relaxed">Пишем зачеты раз в месяц для контроля прогресса и снятия стресса.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 animate-scroll" style="transition-delay: 200ms;">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-400"><i data-lucide="calendar-check" class="w-6.5 h-6.5"></i></div>
+            <div>
+              <h4 class="text-xl font-display font-bold mb-3">Гибкий график</h4>
+              <p class="text-brand-100/70 leading-relaxed">Возможность переносов и подбора удобного времени.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 animate-scroll" style="transition-delay: 250ms;">
+            <div class="shrink-0 w-12 h-12 rounded-xl bg-brand-800 flex items-center justify-center text-brand-400"><i data-lucide="heart-handshake" class="w-6.5 h-6.5"></i></div>
+            <div>
+              <h4 class="text-xl font-display font-bold mb-3">Всегда на связи</h4>
+              <p class="text-brand-100/70 leading-relaxed">Отвечаю на вопросы ученика в Telegram вне уроков.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8 text-center lg:text-left animate-scroll">
+          <div class="max-w-2xl">
+            <h2 class="text-base font-bold text-brand-600 uppercase tracking-widest mb-4">Результаты</h2>
+            <h3 class="text-3xl sm:text-5xl font-display font-bold text-slate-900 leading-tight">Истории успеха моих учеников</h3>
+          </div>
+          <div class="flex items-center gap-2 bg-brand-50 px-6 py-3 rounded-2xl border border-brand-100">
+            <i data-lucide="message-square" class="text-brand-600"></i>
+            <span class="font-bold text-slate-800">100+ положительных отзывов</span>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="group p-8 bg-slate-50 rounded-[40px] border border-slate-100 relative hover:bg-white hover:shadow-2xl hover:shadow-brand-100 transition-all duration-500 animate-scroll">
+            <div class="absolute top-8 right-8 text-brand-200"><i data-lucide="quote" class="w-12 h-12"></i></div>
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://picsum.photos/seed/review1/400/400" alt="Марина С." class="w-16 h-16 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-lg">Марина С.</h4>
+                <p class="text-brand-600 font-bold text-sm tracking-tight">ЕГЭ: 92 балла</p>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed relative z-10 italic">"Пришла к Алексею за полгода до ЕГЭ с уровнем 60 баллов. Результат превзошел ожидания! Все четко, без лишней воды, очень много дельных лайфхаков."</p>
+          </div>
+          <div class="group p-8 bg-slate-50 rounded-[40px] border border-slate-100 relative hover:bg-white hover:shadow-2xl hover:shadow-brand-100 transition-all duration-500 animate-scroll" style="transition-delay: 100ms;">
+            <div class="absolute top-8 right-8 text-brand-200"><i data-lucide="quote" class="w-12 h-12"></i></div>
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://picsum.photos/seed/review2/400/400" alt="Иван Петров" class="w-16 h-16 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-lg">Иван Петров</h4>
+                <p class="text-brand-600 font-bold text-sm tracking-tight">ОГЭ: Оценка 5</p>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed relative z-10 italic">"Математика всегда была слабым местом. Благодаря занятиям перестал бояться геометрии и сдал экзамен на отлично. Огромное спасибо!"</p>
+          </div>
+          <div class="group p-8 bg-slate-50 rounded-[40px] border border-slate-100 relative hover:bg-white hover:shadow-2xl hover:shadow-brand-100 transition-all duration-500 animate-scroll" style="transition-delay: 200ms;">
+            <div class="absolute top-8 right-8 text-brand-200"><i data-lucide="quote" class="w-12 h-12"></i></div>
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://picsum.photos/seed/review3/400/400" alt="Елена К." class="w-16 h-16 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+              <div>
+                <h4 class="font-display font-bold text-slate-900 text-lg">Елена К.</h4>
+                <p class="text-brand-600 font-bold text-sm tracking-tight">ЕГЭ: 85 баллов</p>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed relative z-10 italic">"Очень удобный формат онлайн-занятий. Понятные конспекты и крутая поддержка в чате. Сдавать было совсем не страшно."</p>
+          </div>
+        </div>
+        <div class="mt-20 p-8 sm:p-12 bg-brand-600 rounded-[40px] relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left animate-scroll">
+          <div class="relative z-10">
+            <h4 class="text-2xl sm:text-3xl font-display font-bold text-white mb-4">Готовы стать следующим в списке поступивших?</h4>
+            <p class="text-brand-50/80 text-lg">Запишитесь на первое пробное занятие уже сегодня — это бесплатно!</p>
+          </div>
+          <a href="#contact" class="relative z-10 shrink-0 bg-white text-brand-600 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-transform shadow-xl shadow-brand-700/50">Хочу результат</a>
+          <div class="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div class="absolute -bottom-10 right-0 w-80 h-80 bg-brand-400/20 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-scroll">
+          <h2 class="text-base font-bold text-brand-600 uppercase tracking-widest mb-4">Цены и абонементы</h2>
+          <h3 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 leading-tight">Прозрачная стоимость <br class="hidden sm:block" /> без скрытых доплат</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-10 rounded-[40px] flex flex-col h-full bg-white transition-all duration-300 border border-slate-100 animate-scroll">
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Разовое занятие</h4>
+            <div class="flex items-baseline gap-2 mb-6">
+              <span class="text-4xl font-display font-black text-slate-900">2 500₽</span>
+              <span class="text-slate-500 font-medium">/ час</span>
+            </div>
+            <ul class="space-y-4 mb-10 flex-grow pt-6 border-t border-slate-50">
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Проверка ДЗ</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Конспект урока</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Поддержка в чате</span></li>
+            </ul>
+            <a href="#contact" class="w-full py-4 rounded-full font-bold text-center transition-all bg-slate-100 text-slate-900 hover:bg-brand-50 hover:text-brand-700">Записаться</a>
+          </div>
+          <div class="p-10 rounded-[40px] flex flex-col h-full bg-white transition-all duration-300 border border-brand-500 shadow-2xl shadow-brand-100 xl:scale-105 z-10 relative overflow-hidden animate-scroll">
+            <div class="absolute top-0 right-0 bg-brand-500 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Самый популярный</div>
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Пакет «Интенсив»</h4>
+            <div class="flex items-baseline gap-2 mb-6">
+              <span class="text-4xl font-display font-black text-slate-900">18 000₽</span>
+              <span class="text-slate-500 font-medium">/ 8 занятий</span>
+            </div>
+            <p class="text-brand-600 font-bold mb-6 text-sm underline underline-offset-4">Выгода: 2 000₽</p>
+            <ul class="space-y-4 mb-10 flex-grow pt-6 border-t border-slate-50">
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Все из разового</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Доп. материалы</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Родительский контроль</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Личный куратор</span></li>
+            </ul>
+            <a href="#contact" class="w-full py-4 rounded-full font-bold text-center transition-all bg-brand-600 text-white shadow-lg shadow-brand-200 hover:bg-brand-700">Выбрать пакет</a>
+          </div>
+          <div class="p-10 rounded-[40px] flex flex-col h-full bg-white transition-all duration-300 border border-slate-100 animate-scroll">
+            <h4 class="text-xl font-display font-bold text-slate-900 mb-2">Группа 4 чел.</h4>
+            <div class="flex items-baseline gap-2 mb-6">
+              <span class="text-4xl font-display font-black text-slate-900">1 200₽</span>
+              <span class="text-slate-500 font-medium">/ занятие</span>
+            </div>
+            <ul class="space-y-4 mb-10 flex-grow pt-6 border-t border-slate-50">
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Записи уроков</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Работа на онлайн-доске</span></li>
+              <li class="flex items-center gap-3 text-slate-600 text-sm"><i data-lucide="check" class="text-brand-600 shrink-0 w-4.5 h-4.5"></i><span>Мини-группа до 4 чел.</span></li>
+            </ul>
+            <a href="#contact" class="w-full py-4 rounded-full font-bold text-center transition-all bg-slate-100 text-slate-900 hover:bg-brand-50 hover:text-brand-700">Вступить в группу</a>
+          </div>
+        </div>
+        <p class="text-center mt-12 text-slate-500 text-sm italic">* Первое диагностическое занятие проводится бесплатно при покупке пакета.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 animate-scroll">
+        <div class="text-center mb-16">
+          <h2 class="text-base font-bold text-brand-600 uppercase tracking-widest mb-4">Чаво</h2>
+          <h3 class="text-3xl sm:text-4xl font-display font-bold text-slate-900">Вопросы и ответы</h3>
+        </div>
+        <div class="space-y-4">
+          <div class="border border-slate-100 rounded-[2rem] overflow-hidden bg-slate-50/50 group">
+            <button class="w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-white transition-colors" onclick="toggleFaq(this)">
+              <span class="font-display font-bold text-slate-900 text-lg sm:text-xl pr-4">Сколько длится подготовка?</span>
+              <div class="faq-icon-container p-2 rounded-full transition-all duration-300 bg-slate-200 text-slate-500 shrink-0">
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <div class="px-8 pb-8 text-slate-600 leading-relaxed text-sm sm:text-base border-t border-slate-100/50 pt-4">Все индивидуально. Кому-то достаточно 3 месяца для повторения, а кому-то нужен год для системного изучения. Оптимально начинать за 10-12 месяцев до экзамена.</div>
+            </div>
+          </div>
+          <div class="border border-slate-100 rounded-[2rem] overflow-hidden bg-slate-50/50 group">
+            <button class="w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-white transition-colors" onclick="toggleFaq(this)">
+              <span class="font-display font-bold text-slate-900 text-lg sm:text-xl pr-4">Можно ли подготовиться с нуля?</span>
+              <div class="faq-icon-container p-2 rounded-full transition-all duration-300 bg-slate-200 text-slate-500 shrink-0">
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <div class="px-8 pb-8 text-slate-600 leading-relaxed text-sm sm:text-base border-t border-slate-100/50 pt-4">Да! Моя методика специально построена так, чтобы постепенно переходить от простых тем к сложным. Главное — дисциплина и выполнение домашних заданий.</div>
+            </div>
+          </div>
+          <div class="border border-slate-100 rounded-[2rem] overflow-hidden bg-slate-50/50 group">
+            <button class="w-full flex items-center justify-between p-6 sm:p-8 text-left hover:bg-white transition-colors" onclick="toggleFaq(this)">
+              <span class="font-display font-bold text-slate-900 text-lg sm:text-xl pr-4">Какой формат занятий?</span>
+              <div class="faq-icon-container p-2 rounded-full transition-all duration-300 bg-slate-200 text-slate-500 shrink-0">
+                <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+              </div>
+            </button>
+            <div class="faq-content">
+              <div class="px-8 pb-8 text-slate-600 leading-relaxed text-sm sm:text-base border-t border-slate-100/50 pt-4">Я провожу занятия онлайн через Zoom или Google Meet с использованием интерактивной онлайн-доски Miro. Это полноценный эффект присутствия.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Simplified -->
+    <section id="contact" class="py-24 bg-slate-50 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="animate-scroll">
+            <h2 class="text-base font-bold text-brand-600 uppercase tracking-widest mb-4">Контакты</h2>
+            <h3 class="text-3xl sm:text-5xl font-display font-bold text-slate-900 leading-tight mb-8">Давайте обсудим <br /> ваше будущее</h3>
+            
+            <div class="space-y-8">
+              <div class="flex items-center gap-6 group">
+                <div class="w-14 h-14 rounded-2xl bg-white border border-brand-100 flex items-center justify-center text-brand-600 transition-all shadow-sm"><i data-lucide="phone"></i></div>
+                <div>
+                  <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Телефон</p>
+                  <a href="tel:+79998887766" class="text-xl font-display font-bold text-slate-900 hover:text-brand-600 transition-colors">+7 (999) 888-77-66</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-6 group">
+                <div class="w-14 h-14 rounded-2xl bg-white border border-brand-100 flex items-center justify-center text-brand-600 transition-all shadow-sm"><i data-lucide="message-circle"></i></div>
+                <div>
+                  <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">Telegram</p>
+                  <a href="https://t.me/placeholder" class="text-xl font-display font-bold text-slate-900 hover:text-brand-600 transition-colors">@math_expert</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-12 p-6 bg-brand-100 rounded-2xl border border-brand-200">
+                <p class="text-brand-800 font-medium">Бесплатный разбор вашей ситуации при записи до конца недели!</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 sm:p-12 rounded-[40px] border border-brand-100 shadow-2xl shadow-brand-100 animate-scroll" style="transition-delay: 200ms;">
+            <h4 class="text-2xl font-display font-bold text-slate-900 mb-4 text-center">Связаться со мной</h4>
+            <p class="text-slate-600 mb-8 text-center">Запись на уроки ведется через мессенджеры или по телефону. Выберите удобный вам способ:</p>
+            
+            <div class="space-y-4">
+              <a href="https://t.me/placeholder" target="_blank" rel="noopener noreferrer" class="w-full bg-[#229ED9] text-white font-bold py-5 rounded-2xl hover:bg-[#1f8cc0] transition-all transform active:scale-95 shadow-lg shadow-[#229ED9]/30 flex items-center justify-center gap-3">
+                <i data-lucide="send" class="w-5 h-5"></i> Написать в Telegram
+              </a>
+              <a href="https://wa.me/79998887766" target="_blank" rel="noopener noreferrer" class="w-full bg-[#25D366] text-white font-bold py-5 rounded-2xl hover:bg-[#20bd5a] transition-all transform active:scale-95 shadow-lg shadow-[#25D366]/30 flex items-center justify-center gap-3">
+                <i data-lucide="message-circle" class="w-5 h-5"></i> Написать в WhatsApp
+              </a>
+              <a href="tel:+79998887766" class="w-full bg-slate-900 text-white font-bold py-5 rounded-2xl hover:bg-slate-800 transition-all transform active:scale-95 shadow-lg flex items-center justify-center gap-3">
+                <i data-lucide="phone" class="w-5 h-5"></i> Позвонить
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 pt-20 pb-10 text-white border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 pb-16 border-b border-white/5">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-2 mb-8">
+              <div class="bg-brand-600 p-2 rounded-lg text-white"><i data-lucide="rocket" class="w-6 h-6"></i></div>
+              <span class="font-display font-bold text-2xl tracking-tight">MathExpert</span>
+            </div>
+            <p class="text-slate-400 mb-8 max-w-sm leading-relaxed">Профессиональная подготовка к государственным экзаменам по математике. Учим понимать, а не зубрить.</p>
+            <div class="flex gap-4">
+              <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1"><i data-lucide="send" class="w-5 h-5"></i></a>
+              <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all transform hover:-translate-y-1"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+          <div class="lg:col-span-4 col-span-2"></div>
+          <div class="lg:col-span-4">
+            <h5 class="font-bold mb-6 uppercase text-xs tracking-widest text-brand-400">Напишите нам</h5>
+            <p class="text-slate-400 text-sm mb-6">Отвечаем в течение 30 минут в рабочее время.</p>
+            <a href="mailto:info@math.ru" class="text-lg font-bold hover:text-brand-400 transition-colors">alex.math@mail.ru</a>
+          </div>
+        </div>
+        <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
+          <p>© 2026 MathExpert. Все права защищены.</p>
+          <div class="flex gap-8">
+            <a href="#" class="hover:text-white transition-colors">Политика конфиденциальности</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
-
